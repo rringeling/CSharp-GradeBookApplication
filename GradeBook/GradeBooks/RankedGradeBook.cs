@@ -19,8 +19,8 @@ namespace GradeBook.GradeBooks
 
             if ( grades[threshold - 1] <= averageGrade ) { return 'A'; }
             if ( grades[threshold * 2] - 1 <= averageGrade ) { return 'B'; }
-            if ( grades[threshold * 2] - 1 <= averageGrade ) { return 'C'; }
-            if ( grades[threshold * 2] - 1 <= averageGrade ) { return 'D'; }
+            if ( grades[threshold * 3] - 1 <= averageGrade ) { return 'C'; }
+            if ( grades[threshold * 4] - 1 <= averageGrade ) { return 'D'; }
 
             return 'F';
         }
