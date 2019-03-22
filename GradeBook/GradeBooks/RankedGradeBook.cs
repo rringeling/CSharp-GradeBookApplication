@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GradeBook.Enums;
+using System;
 using System.Linq;
-using System.Text;
-using GradeBook.Enums;
 
 namespace GradeBook.GradeBooks
 {
@@ -18,9 +16,9 @@ namespace GradeBook.GradeBooks
             var grades = Students.OrderByDescending( s => s.AverageGrade ).Select( s => s.AverageGrade ).ToList();
 
             if ( grades[threshold - 1] <= averageGrade ) { return 'A'; }
-            if ( grades[threshold * 2] - 1 <= averageGrade ) { return 'B'; }
-            if ( grades[threshold * 3] - 1 <= averageGrade ) { return 'C'; }
-            if ( grades[threshold * 4] - 1 <= averageGrade ) { return 'D'; }
+            if ( grades[( threshold * 2 ) - 1] <= averageGrade ) { return 'B'; }
+            if ( grades[( threshold * 3 ) - 1] <= averageGrade ) { return 'C'; }
+            if ( grades[( threshold * 4 ) - 1] <= averageGrade ) { return 'D'; }
 
             return 'F';
         }
